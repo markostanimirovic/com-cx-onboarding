@@ -39,7 +39,10 @@ export class UserListRxjsFacade {
   constructor(private usersResource: UsersResource) {
     combineLatest(this.filter$, this.selectedPageSize$).pipe(
       switchMap(([filter, selectedPageSize]) => this.usersResource.getUsers(filter, selectedPageSize)),
-    ).subscribe(users => this.patchState({ users, showLoading: false }));
+    ).subscribe(
+      users => this.patchState({ users, showLoading: false }),
+      () => this.patchState({ users: [], showLoading: false }),
+    );
   }
 
   updateFilter(filter: string) {

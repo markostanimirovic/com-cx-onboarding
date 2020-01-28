@@ -3,10 +3,10 @@ import { Store } from '@ngrx/store';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, switchMap, withLatestFrom } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { UserListSandbox } from '../../core/sandboxes/user-list.sandbox';
 
 import * as fromUsers from '..';
 import * as UserListActions from '../actions/user-list.actions';
-import { UserListSandbox } from '../../core/sandboxes/user-list.sandbox';
 
 @Injectable()
 export class UserListEffects {

@@ -33,10 +33,11 @@ export class UserListComponent implements OnInit {
   private getUsers() {
     this.showLoading = true;
 
-    this.usersResource.getUsers(this.filter, this.selectedPageSize).subscribe(users => {
-      this.users = users;
-      this.showLoading = false;
-    });
+    this.usersResource.getUsers(this.filter, this.selectedPageSize).subscribe(
+      users => this.users = users,
+      () => this.users = [],
+      () => this.showLoading = false,
+    );
   }
 
 }
