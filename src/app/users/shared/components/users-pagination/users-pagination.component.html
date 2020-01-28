@@ -1,0 +1,8 @@
+<div class="ccx-has-md-buffer-top">
+  <button *ngFor="let pageSize of pageSizes"
+          class="ccx-pagination-button"
+          [class.selected]="pageSize === selectedPageSize"
+          (click)="onPageSizeChange(pageSize)">
+    {{ pageSize }}
+  </button>
+</div>

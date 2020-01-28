@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-color: #0254A7;
+$neutral-color: white;
+
+$medium-space: 15px;
+$small-space: 10px;
+
+$medium-radius-space: 4px;
+
+.ccx-has-md-buffer-right {
+  margin-right: $medium-space;
+}
+
+.ccx-has-md-buffer-top {
+  margin-top: $medium-space;
+}
+
+.ccx-list-item {
+  @extend .ccx-has-md-buffer-top;
+  padding: $small-space;
+  border: 1px solid $primary-color;
+  border-radius: $medium-radius-space;
+}
+
+.ccx-pagination-button {
+  @extend .ccx-has-md-buffer-right;
+  cursor: pointer;
+  background-color: $neutral-color;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: $medium-radius-space;
+
+  &.selected {
+    background-color: $primary-color;
+    color: $neutral-color;
+  }
+}
+
+.ccx-anchor {
+  text-decoration: none;
+  color: $primary-color;
+}

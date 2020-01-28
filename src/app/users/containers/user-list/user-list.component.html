@@ -1,0 +1,17 @@
+<div class="ccx-has-md-buffer-top">
+  <app-users-filter
+    [filter]="filter"
+    (filterChange)="onFilterChange($event)">
+  </app-users-filter>
+
+  <app-user-list-items
+    [users]="users"
+    [showLoading]="showLoading">
+  </app-user-list-items>
+
+  <app-users-pagination
+    [pageSizes]="pageSizes"
+    [selectedPageSize]="selectedPageSize"
+    (pageSizeChange)="onPageSizeChange($event)">
+  </app-users-pagination>
+</div>

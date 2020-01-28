@@ -1,0 +1,9 @@
+<div *ngIf="!showLoading; else loadingSpinner">
+  <div *ngFor="let user of users" class="ccx-list-item">
+    {{ user.firstName + ' ' + user.lastName }}
+  </div>
+</div>
+
+<ng-template #loadingSpinner>
+  <h3>Loading...</h3>
+</ng-template>
