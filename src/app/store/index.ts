@@ -1,8 +1,0 @@
-import { ActionReducerMap } from '@ngrx/store';
-
-// tslint:disable-next-line:no-empty-interface
-export interface State {
-  // add some global state chunks
-}
-
-export const reducers: ActionReducerMap<State> = {};

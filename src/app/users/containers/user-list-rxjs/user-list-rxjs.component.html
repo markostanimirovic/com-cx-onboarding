@@ -1,18 +1,1 @@
-<div *ngIf="viewModel$ | async as vm"
-     class="ccx-has-md-buffer-top">
-  <app-users-filter
-    [filter]="vm.filter"
-    (filterChange)="onFilterChange($event)">
-  </app-users-filter>
-
-  <app-user-list-items
-    [users]="vm.users"
-    [showLoading]="vm.showLoading">
-  </app-user-list-items>
-
-  <app-users-pagination
-    [pageSizes]="vm.pageSizes"
-    [selectedPageSize]="vm.selectedPageSize"
-    (pageSizeChange)="onPageSizeChange($event)">
-  </app-users-pagination>
-</div>
+<p>user-list-rxjs works!</p>
